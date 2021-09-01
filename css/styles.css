@@ -61,6 +61,10 @@
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
   --bs-body-bg: #fff;
+  --bs-body-blog-bg: #FFFBD0;
+  
+  --bs-blog-bg-two:  #666666;
+  --bs-new-footer-bg: #CDB99C;
 }
 
 *,
@@ -4468,6 +4472,43 @@ textarea.form-control-lg {
   color: rgba(0, 0, 0, 0.9);
 }
 
+
+.navbar-custom .navbar-brand {
+  color: rgba(51, 153, 255, 0.9);
+}
+.navbar-custom .navbar-brand:hover, .navbar-custom .navbar-brand:focus {
+  color: rgba(51, 153, 255, 0.9);
+}
+.navbar-custom .navbar-nav .nav-link {
+  color: rgba(51, 153, 255, 0.55);
+}
+.navbar-custom .navbar-nav .nav-link:hover, .navbar-custom .navbar-nav .nav-link:focus {
+  color: rgba(51, 153, 255, 0.7);
+}
+.navbar-custom .navbar-nav .nav-link.disabled {
+  color: rgba(51, 153, 255, 0.3);
+}
+.navbar-custom .navbar-nav .show > .nav-link,
+.navbar-custom .navbar-nav .nav-link.active {
+  color: rgba(51, 153, 255, 0.9);
+}
+.navbar-custom .navbar-toggler {
+  color: rgba(51, 153, 255, 0.55);
+  border-color: rgba(51, 153, 255, 0.1);
+}
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-custom .navbar-text {
+  color: rgba(51, 153, 255, 0.55);
+}
+.navbar-custom .navbar-text a,
+.navbar-custom .navbar-text a:hover,
+.navbar-custom .navbar-text a:focus {
+  color: rgba(, 153, 255, 0.9);
+}
+
+
 .navbar-dark .navbar-brand {
   color: #fff;
 }
@@ -7763,6 +7804,11 @@ textarea.form-control-lg {
   color: #6c757d !important;
 }
 
+.footer-text-muted {
+  --bs-text-opacity: 1;
+  color: #222425 !important;
+}
+
 .text-black-50 {
   --bs-text-opacity: 1;
   color: rgba(0, 0, 0, 0.5) !important;
@@ -7799,6 +7845,16 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
 
+.bg-blog-section {
+  --bs-bg-opacity: 1;
+  background-color: var(--bs-body-blog-bg);
+}
+
+.bg-blog-section-2 {
+  --bs-bg-opacity: 1;
+  background-color: var(--bs-blog-bg-two);
+}
+
 .bg-secondary {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
@@ -7827,6 +7883,11 @@ textarea.form-control-lg {
 .bg-light {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-footer-section {
+  --b: 1;
+  background-color: var(--bs-new-footer-bg);
 }
 
 .bg-dark {
@@ -11314,16 +11375,30 @@ hr.divider-light {
   background-color: #fff;
 }
 
+#blog-page .navbar-brand {
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 500;
+  color: #3399FF;
+}
+
+#blog-page  .navbar-brand:hover {
+  color: #ff0000;
+}
+
+
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   background-color: #fff;
   transition: background-color 0.2s ease;
 }
+
+
 #mainNav .navbar-brand {
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   color: #212529;
 }
+
 #mainNav .navbar-nav .nav-item .nav-link {
   color: #6c757d;
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -11385,6 +11460,17 @@ header.masthead {
   background-attachment: scroll;
   background-size: cover;
 }
+header.masthead_blog {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(to bottom, rgba(20, 20, 20, 0.8) 0%, rgba(58, 57, 57, 0.8) 100%), url("../assets/img/blog/blogfirstImage.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+
 header.masthead h1, header.masthead .h1 {
   font-size: 2.25rem;
 }
