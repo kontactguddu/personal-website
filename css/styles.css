@@ -20,7 +20,7 @@
   --bs-yellow: #ffc107;
   --bs-green: #198754;
   --bs-teal: #20c997;
-  --bs-cyan: #0dcaf0;
+  --bs-cyan: #28B5C1;
   --bs-white: #fff;
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
@@ -7853,6 +7853,11 @@ textarea.form-control-lg {
 .bg-blog-section-2 {
   --bs-bg-opacity: 1;
   background-color: var(--bs-blog-bg-two);
+}
+
+.bg-portfolio-1 {
+  --bs-bg-opacity: 1;
+  background-color: var(--bs-cyan);
 }
 
 .bg-secondary {
