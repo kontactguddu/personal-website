@@ -7857,7 +7857,7 @@ textarea.form-control-lg {
 
 .bg-portfolio-1 {
   --bs-bg-opacity: 1;
-  background-color: var(--bs-cyan);
+  background-color: var(--bs-gray-600);
 }
 
 .bg-secondary {
